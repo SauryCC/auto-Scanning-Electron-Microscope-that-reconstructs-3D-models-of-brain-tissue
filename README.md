@@ -4,4 +4,4 @@ Very low cost automatic Scanning-Electron-Microscope that reconstructs 3D models
 Built the control system using C# and .NET frame. Programmed 4 microcontrollers to perform the sample slicing through TCP, and construct 3D maps in the control terminal with e-microscope photos. Image deep learning is based on CNN.
 
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](poster research Uoft_lr.jpg)
