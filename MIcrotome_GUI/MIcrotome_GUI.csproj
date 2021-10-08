@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAF03807-E170-4DE6-BDC6-19938D663137}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MIcrotome_GUI</RootNamespace>
+    <AssemblyName>MIcrotome_GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.Platform.NetFramework, Version=4.3.0.3890, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emgu.CV.4.3.0.3890\lib\net461\Emgu.CV.Platform.NetFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Platform.NetStandard, Version=4.3.0.3890, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emgu.CV.4.3.0.3890\lib\net461\Emgu.CV.Platform.NetStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Matrox.MatroxImagingLibrary, Version=9.0.1949.1, Culture=neutral, PublicKeyToken=5a83d419d44a9d98, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Matrox Imaging\Mil\MIL.NET\Matrox.MatroxImagingLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coordinate.cs" />
+    <Compile Include="CNaviManage.cs" />
+    <Compile Include="COVManage.cs" />
+    <Compile Include="CSEMImage_analog.cs" />
+    <Compile Include="CCoarsePositioner.cs" />
+    <Compile Include="CSEM_Controller.cs" />
+    <Compile Include="CSmarAct.cs" />
+    <Compile Include="CCoordinate.cs" />
+    <Compile Include="CDeckLink.cs" />
+    <Compile Include="CStage.cs" />
+    <Compile Include="CThread.cs" />
+    <Compile Include="Form_NavigationBuild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NavigationBuild.Designer.cs">
+      <DependentUpon>Form_NavigationBuild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Varibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SEMImageThreads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Parameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BackgroundThreads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knife_Controller.cs" />
+    <Compile Include="Main_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_control.Designer.cs">
+      <DependentUpon>Main_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_NavigationBuild.resx">
+      <DependentUpon>Form_NavigationBuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_control.resx">
+      <DependentUpon>Main_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Coordinate.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="DeckLinkAPI">
+      <Guid>{D864517A-EDD5-466D-867D-C819F1C052BB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
